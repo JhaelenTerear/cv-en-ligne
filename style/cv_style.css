@@ -1,0 +1,109 @@
+/* Styles des images */
+img.profil {
+	width: 250px;
+	height: auto;
+	
+	border: 1px solid #ddd;
+	border-radius: 10%;
+	padding: 10px;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Styles des divisions */
+div.image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 20px;	
+}
+
+div.en_tete {
+	background-image: url("../img/fond_en_tete.jpg");
+	padding: 30px;
+}
+
+div.competences {
+	background-image: url("../img/competences.jpg");
+}
+
+div.experiences {
+	background-image: url("../img/experiences.jpg");
+}
+
+div.formations {
+	background-image: url("../img/formations.jpg");
+}
+
+div.centres_interet {
+	background-image: url("../img/centres_interet.jpg");
+}
+
+div.conteneur_centre {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* Styles des titres */
+h1.nom {
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;
+	color: ghostwhite;
+	text-shadow: 0 0 8px black;
+}
+
+h1.titre_rubrique {
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;
+}
+
+h2.infos {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: ghostwhite;
+	text-shadow: 0 0 5px black;
+}
+
+/* Style des paragraphes */
+p.titre {
+	font-family: Verdana, Geneva, sans-serif;
+	font-variant: small-caps;
+	font-size: 1.15em;
+	font-weight: bold;
+	color: ghostwhite;
+	text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+}
+
+p.sous_titre {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1.05em;
+	font-style: italic;
+	color: ghostwhite;
+	text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+}
+
+/* Style pour l'ascenseur vertical */
+.retractable {
+	cursor: pointer;
+	width: 100%;
+}
+
+.active, .retractable:hover {
+	letter-spacing: 1px;
+}
+
+.contenu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+ 
+.retractable:before {
+	content: "+";
+}
+
+.active:before {
+	content: "-";
+}

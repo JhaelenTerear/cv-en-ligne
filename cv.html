@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<title>CV de Julien Corroyer</title>
+		<link rel="stylesheet" type="text/css" href="style/cv_style.css">
+	</head>
+	<body>
+		<div class="image en_tete">
+			<img class="profil"
+				src="img/profil.jpg"
+				alt="Photo de profil">
+				
+			<div class="conteneur_centre">
+				<h1 class="nom">
+					Julien Corroyer
+				</h1>
+				<h2 class="infos">
+					36 ans – Chambéry (73) <br/>
+					06 13 84 72 14 – julien.corroyer@gmail.com
+				</h2>
+			</div>
+		</div>
+		
+		<div class="conteneur_centre">
+			<h1 class="titre_rubrique retractable">
+				Compétences
+			</h1>
+			<div class="contenu image competences">
+				<p class="sous_titre">
+					Conduite de projets informatiques
+				</p>
+				<p class="sous_titre">
+					Animation d’équipes transverses MOA et MOE
+				</p>
+				<p class="sous_titre">
+					Management d’équipe
+				</p>
+				<p class="sous_titre">
+					Formation des équipes
+				</p>
+				<p class="sous_titre">
+					Anglais niveau B1 (classification CECRL)
+				</p>
+			</div>
+		</div>
+		
+		<div class="conteneur_centre">
+			<h1 class="titre_rubrique retractable">
+				Expériences
+			</h1>
+			<div class="contenu image experiences">
+				<p class="liste_experiences">
+					<p class="titre">
+						Consultant en systèmes d’information
+					</p>
+					<p class="sous_titre">
+						Août 2016 à Août 2018 – SII – Société de Services et d’Ingénierie en Informatique - En délégation au sein d’Orange Wholesale France – Lyon
+					</p>
+					<p class="titre">
+						Responsable Développement et Intégration
+					</p>
+					<p class="sous_titre">
+						Novembre 2015 à Avril 2016 – VIPEO – Courtage en Assurances & Mutuelles – Lyon
+					</p>
+					<p class="titre">
+						Consultant en systèmes d’information
+					</p>
+					<p class="sous_titre">
+						Janvier 2015 à Octobre 2015 – Hardis Conseil – Cabinet de Conseil – En délégation au sein de la Mutuelle APICIL – Lyon
+					</p>
+					<p class="titre">
+						Chef de projet informatique
+					</p>
+					<p class="sous_titre">
+						Avril 2013 à Juin 2014 – General Electric Capital France – Banque & Assurances – Paris
+					</p>
+					<p class="titre">
+						Chef de projet informatique & Lead developpeur .net
+					</p>
+					<p class="sous_titre">
+						Avril 2006 à Septembre 2012 – Armée de Terre – Saumur puis Paris
+					</p>
+				</p>
+			</div>
+		</div>
+				
+		<div class="conteneur_centre">
+			<h1 class="titre_rubrique retractable">
+				Formations
+			</h1>	
+			<div class="contenu image formations">
+				<p class="liste_formations">
+					<p class="titre">
+						2013 – Master 2 MIAGE
+					</p>
+					<p class="sous_titre">
+						Université Paris-Dauphine, Paris
+					</p>
+					<p class="titre">
+						2006 – Brevet de Technicien de l'Armée de Terre – Développeur
+					</p>
+					<p class="sous_titre">
+						Ecole Supérieure d’Application des Transmissions, Cesson-Sévigné
+					</p>
+					<p class="titre">
+						2005 – Formation initiale de sous-officier de l’Armée de Terre
+					</p>
+					<p class="sous_titre">
+						Ecole Nationale des Sous-officiers d’Active, Saint-Maixent-l’Ecole
+					</p>
+				</p>
+			</div>
+		</div>
+				
+		<div class="conteneur_centre">
+			<h1 class="titre_rubrique retractable">
+				Centres d'intérêt
+			</h1>
+			<div class="contenu image centres_interet">
+				<p class="sous_titre">
+					Photographie
+				</p>
+				<p class="sous_titre">
+					Sports de montagne
+				</p>
+				<p class="sous_titre">
+					Lecture
+				</p>
+				<p class="sous_titre">
+					Jeux de société modernes
+				</p>
+			</div>
+		</div>
+		
+	<!-- Script Javascript pour l'animation de l'ascenseur -->
+	<script>
+		var ascenseur = document.getElementsByClassName("retractable");
+		var i;
+
+		for (i = 0; i < ascenseur.length; i++) {
+			ascenseur[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var contenu = this.nextElementSibling;
+				if (contenu.style.maxHeight){
+					contenu.style.maxHeight = null;
+				}
+				else {
+					contenu.style.maxHeight = contenu.scrollHeight + "px";
+				} 
+			});
+		}
+	</script>	
+		
+	</body>
+</html>
