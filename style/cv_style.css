@@ -86,20 +86,21 @@ p.sous_titre {
 	width: 100%;
 }
 
-.active, .retractable:hover {
+.actif, .retractable:hover {
 	letter-spacing: 1px;
 }
+
+.actif:before {
+	content: "-";
+}
+
+.non_actif:before {
+	content: "+";
+}
+
 
 .contenu {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.3s ease-out;
-}
- 
-.retractable:before {
-	content: "+";
-}
-
-.active:before {
-	content: "-";
 }
