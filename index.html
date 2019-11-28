@@ -21,7 +21,7 @@
 		</div>
 		
 		<div class="conteneur_centre">
-			<h1 class="titre_rubrique retractable">
+			<h1 class="titre_rubrique retractable non_actif">
 				Compétences
 			</h1>
 			<div class="contenu image competences">
@@ -44,7 +44,7 @@
 		</div>
 		
 		<div class="conteneur_centre">
-			<h1 class="titre_rubrique retractable">
+			<h1 class="titre_rubrique retractable non_actif">
 				Expériences
 			</h1>
 			<div class="contenu image experiences">
@@ -84,7 +84,7 @@
 		</div>
 				
 		<div class="conteneur_centre">
-			<h1 class="titre_rubrique retractable">
+			<h1 class="titre_rubrique retractable non_actif">
 				Formations
 			</h1>	
 			<div class="contenu image formations">
@@ -112,7 +112,7 @@
 		</div>
 				
 		<div class="conteneur_centre">
-			<h1 class="titre_rubrique retractable">
+			<h1 class="titre_rubrique retractable non_actif">
 				Centres d'intérêt
 			</h1>
 			<div class="contenu image centres_interet">
@@ -133,19 +133,25 @@
 		
 	<!-- Script Javascript pour l'animation de l'ascenseur -->
 	<script>
-		var ascenseur = document.getElementsByClassName("retractable");
+		var ascenseurs = document.getElementsByClassName("retractable");
 		var i;
 
-		for (i = 0; i < ascenseur.length; i++) {
-			ascenseur[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var contenu = this.nextElementSibling;
-				if (contenu.style.maxHeight){
-					contenu.style.maxHeight = null;
+		for (i = 0; i < ascenseurs.length; i++) {
+			ascenseurs[i].addEventListener("click", function() {
+				// Détermination si l'élément actuel est actif
+				var est_actif = this.classList.contains("actif") ? true : false;
+
+				// Dans tous les cas, on ferme tous les éléments actifs
+				for (ascenseur_actif of document.getElementsByClassName("actif")) {
+					ascenseur_actif.nextElementSibling.style.maxHeight = null;
+					ascenseur_actif.classList.replace("actif","non_actif");
 				}
-				else {
-					contenu.style.maxHeight = contenu.scrollHeight + "px";
-				} 
+			
+				// Puis, seulement si l'élément actuel n'était pas actif, on l'ouvre
+				if (!est_actif) {
+					this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + "px";
+					this.classList.replace("non_actif","actif");					
+				}
 			});
 		}
 	</script>	
