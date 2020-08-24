@@ -1,2 +1,2 @@
-# simplon-demo
-Contient la page de démonstation réalisée dans le cadre de ma candidature à Simplon Chambéry.
+# cv en ligne
+CV de Julien Corroyer mis en ligne avec des animations.
